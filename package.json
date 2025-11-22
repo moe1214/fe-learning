@@ -1,0 +1,21 @@
+{
+  "name": "fe-learning",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @fe-learning/web dev",
+    "dev:api": "pnpm --filter @fe-learning/api dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "typecheck": "pnpm -r typecheck",
+    "journal:new": "pnpm --filter @fe-learning/cli run journal:new",
+    "lab:create": "pnpm --filter @fe-learning/cli run lab:create --",
+    "sql:run": "pnpm --filter @fe-learning/sqlite run run --"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "sql/*"
+  ]
+}
